@@ -4,21 +4,26 @@
 
 /* button과 input은 글꼴이 body와 다른 것을 인지 */
 /* 상속되지 않는 것을 알게 됐다. */
-input, select, textarea, button{font-family:inherit;}
+input,
+select,
+textarea,
+button {
+  font-family: inherit;
+}
 
 :root {
-  --blue: #3692FF;
-  --skyblue: #E6F2FF;
+  --blue: #3692ff;
+  --skyblue: #e6f2ff;
   --white: #ffffff;
-  --input: #F3F4F6;
-  --button: #9CA3AF;
-  --link: #3182F6;
-  --black: #1F2937;
+  --input: #f3f4f6;
+  --button: #9ca3af;
+  --link: #3182f6;
+  --black: #1f2937;
   --font-color: #374151;
-  --image-background: #CFE5FF;
+  --image-background: #cfe5ff;
   --footer-background: #111827;
   --codeit: #9ca3af;
-  --footer-font: #E5E7EB;
+  --footer-font: #e5e7eb;
 }
 
 body {
@@ -49,7 +54,7 @@ button {
   border-style: none;
 }
 
-ul{
+ul {
   list-style-type: none;
 }
 
@@ -90,12 +95,12 @@ h3 {
   height: 70px;
 }
 
-.bar-logo{
+.bar-logo {
   display: flex;
   align-items: center;
 }
 
-.logo{
+.logo {
   color: var(--blue);
   font-size: 26px;
   font-weight: 700;
@@ -104,7 +109,7 @@ h3 {
   line-height: 34.6px;
 }
 
-.bar-list{
+.bar-list {
   display: flex;
   padding: 15px;
   gap: 30px;
@@ -117,12 +122,12 @@ h3 {
   font-size: 18px;
 }
 
-.bar-login{
+.bar-login {
   display: flex;
   margin-left: auto;
 }
 
-.login-button{
+.login-button {
   padding: 12px 24px;
   border-radius: 8px;
   font-size: 16px;
@@ -133,11 +138,12 @@ h3 {
   height: 42px;
 }
 
-.main-blue{       /* 창을 줄였을 때 하늘색 배경이 사라짐 */
+.main-blue {
+  /* 창을 줄였을 때 하늘색 배경이 사라짐 */
   background-color: var(--image-background);
 }
 
-.first-block{
+.first-block {
   display: flex;
   height: 540px;
   justify-content: center;
@@ -148,7 +154,8 @@ h3 {
   display: flex;
 }
 
-.empty-space, .fifth-empty-space {
+.empty-space,
+.fifth-empty-space {
   width: 150px;
 }
 
@@ -250,13 +257,13 @@ h3 {
   white-space: nowrap;
 }
 
-.codeit{
+.codeit {
   color: var(--codeit);
   font-size: 16px;
   font-weight: 400;
 }
 
-.support{
+.support {
   font-size: 16px;
   font-weight: 400;
   display: flex;
@@ -284,7 +291,7 @@ h3 {
 }
 
 /* Tablet view */
-@media (min-width: 744px) and (max-width : 1199px){
+@media (min-width: 744px) and (max-width: 1199px) {
   h2 {
     font-size: 32px;
     margin-top: 8px;
@@ -292,7 +299,7 @@ h3 {
   }
 
   h2 br {
-    display : none;
+    display: none;
     /* 좀 더 괜찮은 방법, 더 성숙한 방법
     display: inline-block;
     content: " ";
@@ -302,7 +309,7 @@ h3 {
   h3 {
     font-size: 18px;
   }
-  
+
   .bar {
     padding: 0 24px;
   }
@@ -311,7 +318,7 @@ h3 {
     height: 771px;
     flex-direction: column;
     align-items: center;
-    gap:94px;
+    gap: 94px;
   }
 
   .first-container {
@@ -327,9 +334,9 @@ h3 {
   }
 
   .first-contents br {
-    display : none;
+    display: none;
   }
-  
+
   .panda-image {
     align-self: center;
   }
@@ -385,10 +392,8 @@ h3 {
   }
 }
 
-
 /* Mobile view */
 @media (max-width: 743px) {
-
   h1 {
     font-size: 16px;
   }
@@ -401,7 +406,7 @@ h3 {
   }
 
   h2 br {
-    display : none;
+    display: none;
     /* 좀 더 괜찮은 방법, 더 성숙한 방법
     display: inline-block;
     content: " ";
@@ -416,7 +421,7 @@ h3 {
     font-size: 16px;
     line-height: 19px;
   }
-  
+
   .bar {
     padding: 0 16px;
   }
@@ -450,7 +455,7 @@ h3 {
     line-height: 44.8px;
     margin-top: 48px;
   }
-  
+
   .panda-image {
     align-self: center;
     width: 626px;

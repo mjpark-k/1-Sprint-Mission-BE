@@ -104,7 +104,7 @@ app.get(
       where: { id },
       include: {
         comment: true,
-      }
+      },
     });
     res.send(product);
   })
@@ -177,7 +177,7 @@ app.get(
       where: { id },
       include: {
         comment: true,
-      }
+      },
     });
     res.send(article);
   })
@@ -271,7 +271,19 @@ app.get(
       skip: cursor ? 1 : 0,
       take: parseInt(limit),
       cursor: cursor ? { id: parseInt(cursor) } : undefined,
-      orderBy: { createdAt: "desc" },
+      orderBy: { createdAt: "asc" },
+    });
+    res.send(comment);
+  })
+);
+
+// 자유게시판 댓글 한 개 조회
+app.get(
+  "/articles/:articleId/comments/:id",
+  asyncHandler(async (req, res) => {
+    const id = parseInt(req.params.id);
+    const comment = await prisma.comment.findUniqueOrThrow({
+      where: { id },
     });
     res.send(comment);
   })
